@@ -90,7 +90,8 @@ else
                 Description = "This is a suggestion created by the sample data generation method.",
                 Status = statuses[2],
                 UserVotes = votes,
-                OwnerNotes = "This is a note for the status."
+                OwnerNotes = "This is a note for the status.",
+                ApprovedForRelease = true
             };
         await suggestionData.CreateSuggestion(suggestion);
 
