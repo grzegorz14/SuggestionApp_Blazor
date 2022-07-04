@@ -2,6 +2,7 @@
 @inject ISuggestionData suggestionData
 @inject IUserData userData
 @inject NavigationManager navManager
+@inject AuthenticationStateProvider authProvider
 
 <h1>My Profile</h1>
 
@@ -176,7 +177,7 @@
 
     protected async override Task OnInitializedAsync()
     {
-        loggedInUser = await userData.GetUserFromAuthentication("abc-123");
+        loggedInUser = await authProvider.GetUserFromAuth(userData);
 
         var results = await suggestionData.GetUsersSuggestions(loggedInUser.Id);
 
