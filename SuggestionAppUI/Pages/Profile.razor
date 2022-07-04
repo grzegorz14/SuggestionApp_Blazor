@@ -14,7 +14,7 @@
 <div>
     <h2>My Account</h2>
     <p>
-        <a href="#">Edit My Profile</a>
+        <a href="MicrosoftIdentity/Account/EditProfile">Edit My Profile</a>
     </p>
 </div>
 
@@ -176,7 +176,6 @@
 
     protected async override Task OnInitializedAsync()
     {
-        //TODO - replace with user lookup
         loggedInUser = await userData.GetUserFromAuthentication("abc-123");
 
         var results = await suggestionData.GetUsersSuggestions(loggedInUser.Id);
