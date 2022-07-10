@@ -67,7 +67,7 @@
         }
         @if (statuses is not null)
         {
-            <div>
+            <div class="statuses">
                 <span class="text-uppercase fw-bold">Status</span>
                 <div class="@GetSelectedStatus()" @onclick="(() => OnStatusClick())">All</div>
                 @foreach (var s in statuses)
@@ -320,7 +320,7 @@
 
     private string GetVoteClass(SuggestionModel suggestion)
     {
-        if (suggestion.UserVotes is null || suggestion.UserVotes == 0)
+        if (suggestion.UserVotes is null || suggestion.UserVotes.Count == 0)
         {
             return "suggestion-entry-no-votes";
         }
