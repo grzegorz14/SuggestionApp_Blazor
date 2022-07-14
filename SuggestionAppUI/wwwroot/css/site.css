@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background: url(../images/backgroundImage.jpg) no-repeat center center fixed;
+    background: url(../images/background.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
 }
@@ -467,7 +467,7 @@ a, .btn-link {
     padding: 1.5rem;
 }
 
-.suggestion-detail-status-complete {
+.suggestion-detail-status-completed {
     background-color: #B5D43A;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -555,6 +555,7 @@ a, .btn-link {
 .submission-edit-approve {
     color: #B5D43A;
 }
+
     .submission-edit-approve:hover {
         font-weight: 700;
     }
@@ -562,6 +563,7 @@ a, .btn-link {
 .submission-edit-reject {
     color: #E9354C;
 }
+
     .submission-edit-reject:hover {
         font-weight: 700;
     }
@@ -570,6 +572,7 @@ a, .btn-link {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
     .submission-edit-icon:hover {
         color: #39BAD8;
     }
@@ -588,4 +591,52 @@ a, .btn-link {
     color: #A9A9A9;
     height: 2px;
     opacity: 1;
+}
+
+.suggestion-entry-bottom {
+    display: flex;
+}
+
+.btn-archive {
+    border: 0;
+    background-color: #FFFFFF;
+    padding: 0 10px;
+    flex: unset;
+}
+
+.btn-archive-confirm,
+.btn-archive-reject {
+    text-transform: uppercase;
+    color: darkgray;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    flex: 1;
+}
+
+.btn-archive-confirm {
+    color: #E9354C;
+}
+
+.admin-details {
+    margin-top: 20px;
+}
+
+.admin-set-statuses {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.btn-status-completed:hover {
+    color: #B5D43A;
+}
+.btn-status-watching:hover {
+    color: #E9354C;
+}
+.btn-status-upcoming:hover {
+    color: #835581;
+}
+.btn-status-dismissed:hover {
+    color: #F9C30B;
 }
